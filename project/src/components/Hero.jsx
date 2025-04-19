@@ -20,7 +20,7 @@ function FloatingSpheres() {
 
 export default function Hero() {
   return (
-    <div id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-dark to-black overflow-hidden">
+    <div id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-light to-white dark:from-dark-darker dark:to-dark overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <Canvas className="w-full h-full">
           <FloatingSpheres />
@@ -32,16 +32,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-6xl font-bold text-white mb-6"
+          className="text-4xl sm:text-6xl font-bold text-dark-darker dark:text-white mb-6 font-display"
         >
           Preserve Your Legacy
-          <span className="block text-primary">Through Digital Echoes</span>
+          <span className="block text-primary dark:text-primary-light">Through Digital Echoes</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-xl text-dark-darker/80 dark:text-gray-200 mb-8 max-w-2xl mx-auto font-body"
         >
           Create your digital legacy today. Share your stories, memories, and wisdom through our AI-powered digital diary system, ensuring your essence lives on for generations to come.
         </motion.p>
@@ -49,12 +49,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex justify-center gap-4"
+          className="flex justify-center space-x-4"
         >
-          <button className="bg-primary hover:bg-secondary text-white text-lg px-8 py-4 rounded-full font-medium transition-all backdrop-blur-lg">
-            Start Your Digital Diary
+          <button className="bg-primary hover:bg-primary-dark dark:bg-primary dark:hover:bg-primary-light text-white px-8 py-3 rounded-md text-lg font-medium transition-all shadow-md">
+            Get Started
           </button>
-          <button className="bg-white/10 hover:bg-white/20 text-white text-lg px-8 py-4 rounded-full font-medium transition-all backdrop-blur-lg border border-white/30">
+          <button className="bg-white hover:bg-light dark:bg-dark-light dark:hover:bg-dark text-dark-darker dark:text-white px-8 py-3 rounded-md text-lg font-medium transition-all border border-light-darker dark:border-dark-light shadow-sm">
             Learn More
           </button>
         </motion.div>
